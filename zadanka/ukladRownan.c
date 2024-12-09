@@ -45,6 +45,9 @@ int main() {
     printf("%lf\n", result[0]);
     printf("%lf", result[1]);
 
+    free(wyniki);
+    free(uklad);
+
     _getch();
 }
 
