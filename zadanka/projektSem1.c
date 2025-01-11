@@ -2,6 +2,7 @@
 #include<math.h>
 #include<stdlib.h>
 #include<time.h>
+#include<conio.h>
 
 #define N 5
 
@@ -62,14 +63,14 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         for (int j = N - 1; j >= 0; j--) {
-            row[j] = arr[i][j];
+            row[N - 1 - j] = arr[i][j];
         }
         right[i] = howManySeen(row);
     }
 
     for (int i = 0; i < N; i++) {
         for (int j = N - 1; j >= 0; j--) {
-            row[j] = arr[j][i];
+            row[N - 1 - j] = arr[j][i];
         }
         bottom[i] = howManySeen(row);
     }
@@ -108,4 +109,6 @@ int main() {
             printf("%d ", bottom[i-1]);
         }
     }
+
+    _getch();
 }
